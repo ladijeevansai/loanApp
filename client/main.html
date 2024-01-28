@@ -1,0 +1,29 @@
+<!-- client/main.html -->
+<head>
+  <title>loanApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <h1>Users</h1>
+  {{#each user in users}}
+    <p>{{user.email}}</p>
+  {{/each}}
+
+  <h1>Roles</h1>
+  {{#each role in roles}}
+    <p>{{role.name}}</p>
+  {{/each}}
+
+  <h1>Loans</h1>
+  {{#each loan in loans}}
+    <p>{{loan.borrowerId}} - {{loan.amount}} - {{loan.status}}</p>
+  {{/each}}
+
+  <h1>Transactions</h1>
+  {{#each transaction in transactions}}
+    <p>{{transaction.lenderId}} - {{transaction.borrowerId}} - {{transaction.amount}} - {{transaction.status}}</p>
+  {{/each}}
+</body>
